@@ -15,4 +15,12 @@ export class SeriesListComponent implements OnInit {
   ngOnInit(): void {
     this.svc.fetchAll().subscribe(data => this.series = data);
   }
+
+  getSeasonsAverage(): number {
+    if (!this.series.length) {
+      return 0;
+    }
+    const total = this.series.reduce((sum, s) => sum + s.seasons, 0);
+    return Math.round(total / this.series.length);
+  }
 }
