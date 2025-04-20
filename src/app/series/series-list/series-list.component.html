@@ -1,0 +1,21 @@
+<div class="container-fluid">
+  <h2 class="mt-3 mb-3">TV Series</h2>
+  <table class="table table-striped">
+    <thead class="thead-dark">
+      <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Channel</th>
+        <th>Seasons</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let s of series">
+        <td>{{ s.id }}</td>
+        <td><a href="#">{{ s.name }}</a></td>
+        <td>{{ s.channel }}</td>
+        <td>{{ s.seasons }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
